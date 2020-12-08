@@ -19,7 +19,20 @@ function launcher_assets() {
 	wp_enqueue_script( "bootstrap-jquery-js", get_theme_file_uri("/assets/js/bootstrap.min.js"), array("jquery"), null, true);
 	wp_enqueue_script( "waypoints-jquery-js", get_theme_file_uri("/assets/js/jquery.waypoints.min.js"), array("jquery"), null, true);
 	wp_enqueue_script( "simplyCountdown-jquery-js", get_theme_file_uri("/assets/js/simplyCountdown.js"), array("jquery"), null, true);
-	wp_enqueue_script( "main-jquery-js", get_theme_file_uri("/assets/js/main.js"), array("jquery"), null, true);
+	wp_enqueue_script( "main-jquery-js", get_theme_file_uri("/assets/js/main.js"), array("jquery"), time(), true);
+
+
+	$launcher_year = get_post_meta( get_the_ID(), "year", true );
+	$launcher_month = get_post_meta( get_the_ID(), "month", true );
+	$launcher_day = get_post_meta( get_the_ID(), "day", true );
+
+	wp_localize_script( "main-jquery-js", "datedata", array(
+		"year"  => $launcher_year,
+		"month" => $launcher_month,
+		"day"	=> $launcher_day,
+	) );
+
+
 }
 add_action( "wp_enqueue_scripts", "launcher_assets" );
 
