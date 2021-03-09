@@ -1,4 +1,4 @@
-/* Theme Name: launcher
+/* Theme Name: Launcher
 Theme URI: 
 Author: sadat himel
 Author URI: https://wordpress.org/
@@ -11,12 +11,3 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog,education
 Text Domain: launcher
 */
-
-#fh5co-logo a {
-	font-size: 48px;
-	color: #222 !important;
-	padding-top: 30px;
-}
-#fh5co-logo {
-	margin-top: 30px;
-}
