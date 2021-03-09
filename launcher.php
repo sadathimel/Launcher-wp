@@ -3,11 +3,14 @@
 **Template Name: Launcher Homepage
 */
 ?>
-<?php get_header( ); ?>
+<?php 
+	get_header( );
+	the_post(); 
+?>
 	<body>
 	<div class="fh5co-loader"></div>
 
-	<aside id="fh5co-aside" role="sidebar" class="text-center" style="background-image: url(images/img_bg_1_gradient.jpg);">
+	<aside id="fh5co-aside" role="sidebar" class="text-center home-side">
 		<h1 id="fh5co-logo">
 			<a href="<?php echo site_url(); ?>">
 				<?php bloginfo("name"); ?>
